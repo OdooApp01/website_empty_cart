@@ -1,0 +1,28 @@
+<odoo>
+    <template id='website_clear_cart_view' inherit_id="website_sale.cart" customize_show="True" name="Clear Cart">
+        <xpath expr="//div[hasclass('oe_website_sale')]//a[@href='/shop']" position="after">
+            <a t-if='request.website.sale_get_order().order_line' role='button' href='/website/clear/cart' class='btn btn-primary mb32' style="background-color:#685563">
+                <span>Clear Cart</span>
+            </a>
+        </xpath>
+
+    </template>
+
+    <template id='cart_popover_clear_cart' inherit_id='website_sale.cart_popover'>
+        <xpath expr="//a[@href='/shop/cart']" position='after'>
+            <t t-if="website_sale_order.website_order_line">
+                <a role='button' href='/website/clear/cart' class='btn btn-primary'>
+                    <span>Clear Cart</span>
+                </a>
+            </t>
+        </xpath>
+    </template>
+
+    <template id='cart_clear_add_to_cart' inherit_id="website_sale.product">
+        <xpath expr="//div[@id='add_to_cart_wrap']/a" position='after'>
+            <a role='button' href='/shop' class='btn btn-primary btn-lg' style="background-color:#685563"><i class="fa fa-arrow-left" style="margin-right: 6px;"></i>Shop</a>
+        </xpath>
+
+    </template>
+
+</odoo>
