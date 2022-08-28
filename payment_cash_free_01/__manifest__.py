@@ -1,6 +1,7 @@
 
 {
     'name': 'Payment Acquirer Cash Free 01',
+    'author':'Robert',
     'version': '15.0.0',
     'category': 'Accounting/Payment Acquirers',
     'sequence': 377,
@@ -18,7 +19,7 @@
     'application': True,
     'pre_init_hook':'pre_init_hook',
     'uninstall_hook': 'uninstall_hook',
-    'price': 20,
+    'price': 10,
     'currency': 'USD',
     'license': 'LGPL-3',
 
